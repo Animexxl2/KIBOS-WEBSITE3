@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <title>About Us - KIBOS SPECIAL SENIOR SCHOOL</title>
+  <meta name="description" content="Learn about Kibos Special Senior School - our motto, mission, vision, and core values. Excellence in special needs and inclusive education in Kenya." />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link rel="icon" href="https://via.placeholder.com/60x60?text=Logo" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+    .progress-bar {
+      height: 5px;
+      background: #2563eb;
+      width: 0%;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 16px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    /* Scale content for small screens while maintaining layout - optimized for performance */
+    @media (max-width: 768px) {
+      html {
+        zoom: 0.65;
+        -ms-zoom: 0.65;
+        -webkit-zoom: 0.65;
+        transform: scale3d(0.65, 0.65, 1);
+        transform-origin: 0 0;
+        width: 153.85%;
+        height: 153.85%;
+        will-change: transform;
+      }
+      body {
+        width: 153.85%;
+        overflow-x: auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+    @media (max-width: 480px) {
+      html {
+        zoom: 0.5;
+        -ms-zoom: 0.5;
+        -webkit-zoom: 0.5;
+        transform: scale3d(0.5, 0.5, 1);
+        transform-origin: 0 0;
+        width: 200%;
+        height: 200%;
+        will-change: transform;
+      }
+      body {
+        width: 200%;
+        overflow-x: auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+    /* Ensure content is visible and scrollable on small screens */
+    @media (max-width: 768px) {
+      body {
+        min-width: 100%;
+        overflow-x: auto;
+      }
+    }
+    /* Prevent horizontal scroll on larger screens */
+    @media (min-width: 769px) {
+      html, body {
+        overflow-x: hidden;
+      }
+    }
+    /* Performance optimizations */
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white shadow sticky top-0 z-50">
+    <div class="container mx-auto flex flex-row items-center justify-between p-6">
+      <div class="flex items-center space-x-4">
+        <img src="LOGO.png" alt="School Logo" class="w-14 h-14 rounded-full border-2 border-white">
+        <h1 class="text-2xl font-bold tracking-wide">KIBOS SPECIAL SENIOR SCHOOL</h1>
+      </div>
+      <nav class="flex flex-row gap-6 text-base">
+        <a href="Index.html" class="hover:text-blue-200 transition">Home</a>
+        <a href="Index.html#academics" class="hover:text-blue-200 transition">Academics</a>
+        <a href="Index.html#admissions" class="hover:text-blue-200 transition">Admissions</a>
+        <a href="about.html" class="hover:text-blue-200 transition border-b-2 border-white">About</a>
+        <a href="Index.html#contact" class="hover:text-blue-200 transition">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Page Header -->
+  <section class="bg-blue-800 text-white py-16 px-4">
+    <div class="container mx-auto max-w-6xl text-center">
+      <h2 class="text-4xl font-bold mb-4">About Our School</h2>
+      <p class="text-xl text-blue-100">Discover what makes Kibos Special Senior School unique</p>
+    </div>
+  </section>
+
+  <!-- Motto Section -->
+  <section class="bg-white py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <div class="text-center mb-12">
+      <i class="fas fa-quote-left text-5xl text-green-600 mb-4"></i>
+      <h3 class="text-3xl font-bold text-blue-800 mb-6">Our Motto</h3>
+      <p class="text-4xl font-extrabold text-green-600 italic">Inspired for excellence</p>
+      <p class="text-lg text-gray-600 mt-6 max-w-3xl mx-auto">Our motto reflects our unwavering commitment to inspiring every student through quality education, regardless of their abilities or challenges. We believe that education has the power to transform lives and inspire greatness in every learner.</p>
+    </div>
+  </section>
+
+  <!-- Mission Section -->
+  <section class="bg-gray-100 py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <div class="bg-white p-10 rounded-lg shadow-lg">
+      <div class="flex flex-row items-center gap-8">
+        <div class="flex-shrink-0">
+          <i class="fas fa-bullseye text-6xl text-blue-700"></i>
+        </div>
+        <div class="flex-1 text-left">
+          <h3 class="text-3xl font-bold text-blue-800 mb-6">Our Mission</h3>
+          <p class="text-lg text-gray-700 leading-relaxed">To provide high quality Secondary school education in partnership with stakeholders in order to empower students in all inclusive system to be self-reliant, disciplined, responsible and competitive for post-secondary academic pursuits  and job opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vision Section -->
+  <section class="bg-white py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <div class="bg-blue-50 p-10 rounded-lg shadow-lg">
+      <div class="flex flex-row-reverse items-center gap-8">
+        <div class="flex-shrink-0">
+          <i class="fas fa-eye text-6xl text-blue-700"></i>
+        </div>
+        <div class="flex-1 text-left">
+          <h3 class="text-3xl font-bold text-blue-800 mb-6">Our Vision</h3>
+          <p class="text-lg text-gray-700 leading-relaxed">A secondary school of excellence providing, high quality and affordable education for the visually impaired students within a multi-religious setting</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Values Section -->
+  <section class="bg-gray-100 py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <div class="text-center mb-12">
+      <h3 class="text-3xl font-bold text-blue-800 mb-6">Our Core Values</h3>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto">These fundamental principles guide everything we do and shape the culture of our school community.</p>
+    </div>
+    <div class="grid grid-cols-3 gap-8">
+      <!-- Value 1 -->
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl transition text-center" data-aos="fade-up" data-aos-delay="100">
+        <i class="fas fa-briefcase text-5xl text-blue-600 mb-4"></i>
+        <h4 class="text-xl font-semibold text-blue-800 mb-3">Professionalism</h4>
+        <p class="text-base text-gray-700">We maintain the highest standards of professional conduct, demonstrating competence, dedication, and commitment to excellence in all our endeavors.</p>
+      </div>
+      <!-- Value 2 -->
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl transition text-center" data-aos="fade-up" data-aos-delay="200">
+        <i class="fas fa-shield-alt text-5xl text-purple-600 mb-4"></i>
+        <h4 class="text-xl font-semibold text-blue-800 mb-3">Integrity</h4>
+        <p class="text-base text-gray-700">We act with honesty, transparency, and ethical principles in all our interactions, building trust within our school community.</p>
+      </div>
+      <!-- Value 3 -->
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl transition text-center" data-aos="fade-up" data-aos-delay="300">
+        <i class="fas fa-church text-5xl text-green-600 mb-4"></i>
+        <h4 class="text-xl font-semibold text-blue-800 mb-3">Fear of God</h4>
+        <p class="text-base text-gray-700">We uphold spiritual values and moral principles, guiding our actions with reverence, humility, and a commitment to doing what is right.</p>
+      </div>
+      <!-- Value 4 -->
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl transition text-center" data-aos="fade-up" data-aos-delay="400">
+        <i class="fas fa-handshake text-5xl text-red-600 mb-4"></i>
+        <h4 class="text-xl font-semibold text-blue-800 mb-3">Respect for self and others</h4>
+        <p class="text-base text-gray-700">We foster a culture of mutual respect, valuing ourselves and others, recognizing the dignity and worth of every individual in our community.</p>
+      </div>
+      <!-- Value 5 -->
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl transition text-center" data-aos="fade-up" data-aos-delay="500">
+        <i class="fas fa-clock text-5xl text-yellow-600 mb-4"></i>
+        <h4 class="text-xl font-semibold text-blue-800 mb-3">Time Consciousness</h4>
+        <p class="text-base text-gray-700">We value punctuality and efficient use of time, recognizing that time management is essential for personal growth and academic success.</p>
+      </div>
+      <!-- Value 6 -->
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl transition text-center" data-aos="fade-up" data-aos-delay="600">
+        <i class="fas fa-users text-5xl text-teal-600 mb-4"></i>
+        <h4 class="text-xl font-semibold text-blue-800 mb-3">Teamwork</h4>
+        <p class="text-base text-gray-700">We work together collaboratively, combining our strengths and supporting one another to achieve common goals and create a harmonious learning environment.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-10 mt-10">
+    <div class="container mx-auto flex flex-col items-center justify-center gap-6 px-4">
+      <div class="text-center text-sm">&copy; 2026 Kibos Special Senior School. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- JavaScript Libraries -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+      duration: 800
+    });
+
+    // Progress bar - optimized with requestAnimationFrame
+    let scrollTimeout;
+    function updateProgressBar() {
+      let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    }
+    window.onscroll = function () {
+      if (!scrollTimeout) {
+        scrollTimeout = requestAnimationFrame(function() {
+          updateProgressBar();
+          scrollTimeout = null;
+        });
+      }
+    };
+
+    // Scale page for small screens - optimized with debouncing
+    let resizeTimeout;
+    function scalePageForSmallScreens() {
+      const width = window.innerWidth;
+      const html = document.documentElement;
+      
+      if (width <= 480) {
+        const scale = 0.5;
+        html.style.transform = 'scale3d(' + scale + ', ' + scale + ', 1)';
+        html.style.transformOrigin = '0 0';
+        html.style.width = (100 / scale) + '%';
+        html.style.height = (100 / scale) + '%';
+        document.body.style.width = (100 / scale) + '%';
+      } else if (width <= 768) {
+        const scale = 0.65;
+        html.style.transform = 'scale3d(' + scale + ', ' + scale + ', 1)';
+        html.style.transformOrigin = '0 0';
+        html.style.width = (100 / scale) + '%';
+        html.style.height = (100 / scale) + '%';
+        document.body.style.width = (100 / scale) + '%';
+      } else {
+        html.style.transform = 'scale3d(1, 1, 1)';
+        html.style.transformOrigin = '0 0';
+        html.style.width = '100%';
+        html.style.height = '100%';
+        document.body.style.width = '100%';
+      }
+    }
+    
+    // Debounced resize handler for better performance
+    function debounceResize() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(scalePageForSmallScreens, 150);
+    }
+    
+    // Run on load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', scalePageForSmallScreens);
+    } else {
+      scalePageForSmallScreens();
+    }
+    
+    window.addEventListener('resize', debounceResize, { passive: true });
+    window.addEventListener('orientationchange', function() {
+      setTimeout(scalePageForSmallScreens, 200);
+    }, { passive: true });
+
+  </script>
+
+</body>
+
+</html>
+

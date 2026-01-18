@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes" />
+  <title>KIBOS SPECIAL SENIOR SCHOOL</title>
+  <meta name="description" content="Kibos Special Senior School offers excellence in special needs and inclusive education in Kenya. Learn about our programs, staff, and community." />
+  <meta property="og:title" content="Kibos Special Senior School" />
+  <meta property="og:description" content="Excellence in Special Needs Education in Kenya" />
+  <meta property="og:image" content="https://via.placeholder.com/1200x630?text=Kibos+Special+Secondary" />
+  <meta property="og:url" content="https://kibosspecial.ac.ke/" />
+  <meta property="og:type" content="website" />
+  <meta name="keywords" content="Kibos, Special Needs, Secondary School, Inclusive Education, Kenya, Disability, Learning Support, Teachers, Staff, Awards, Blog, FAQ" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet" />
+  <link rel="icon" href="https://via.placeholder.com/60x60?text=Logo" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <style>
+    .carousel {
+      position: relative;
+      overflow: hidden;
+      height: 400px;
+    }
+
+    .carousel img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+    }
+
+    .carousel img.active {
+      opacity: 1;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .sticky-nav {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .progress-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background: rgba(0, 0, 0, 0.1);
+      z-index: 100;
+    }
+
+    .progress-bar {
+      height: 5px;
+      background: #2563eb;
+      width: 0%;
+    }
+
+    .floating-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #25d366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 24px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 0.875rem;
+    }
+
+    .contrast {
+      filter: invert(1) hue-rotate(180deg);
+      background: #000 !important;
+      color: #fff !important;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-size: 16px;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    /* Scale content for small screens while maintaining layout - optimized for performance */
+    @media (max-width: 768px) {
+      html {
+        zoom: 0.65;
+        -ms-zoom: 0.65;
+        -webkit-zoom: 0.65;
+        transform: scale3d(0.65, 0.65, 1);
+        transform-origin: 0 0;
+        width: 153.85%;
+        height: 153.85%;
+        will-change: transform;
+      }
+      body {
+        width: 153.85%;
+        overflow-x: auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+    @media (max-width: 480px) {
+      html {
+        zoom: 0.5;
+        -ms-zoom: 0.5;
+        -webkit-zoom: 0.5;
+        transform: scale3d(0.5, 0.5, 1);
+        transform-origin: 0 0;
+        width: 200%;
+        height: 200%;
+        will-change: transform;
+      }
+      body {
+        width: 200%;
+        overflow-x: auto;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+      }
+    }
+    /* Ensure content is visible and scrollable on small screens */
+    @media (max-width: 768px) {
+      body {
+        min-width: 100%;
+        overflow-x: auto;
+      }
+    }
+    /* Prevent horizontal scroll on larger screens */
+    @media (min-width: 769px) {
+      html, body {
+        overflow-x: hidden;
+      }
+    }
+    /* Performance optimizations */
+    * {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+    img {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+    }
+  </style>
+</head>
+
+<body class="font-sans bg-gray-50 text-gray-800">
+
+  <!-- Progress Bar -->
+  <div class="progress-container">
+    <div class="progress-bar" id="progressBar"></div>
+  </div>
+
+  <!-- Header -->
+  <header class="bg-blue-900 text-white shadow sticky top-0 z-50">
+    <div class="container mx-auto flex flex-row items-center justify-between p-6">
+      <div class="flex items-center space-x-4">
+        <img src="LOGO.png" alt="School Logo" class="w-14 h-14 rounded-full border-2 border-white">
+        <h1 class="text-2xl font-bold tracking-wide">KIBOS SPECIAL SENIOR SCHOOL</h1>
+      </div>
+      <nav class="flex flex-row gap-6 text-base">
+        <a href="#" class="hover:text-blue-200 transition">Home</a>
+        <a href="#academics" class="hover:text-blue-200 transition">Academics</a>
+        <a href="#admissions" class="hover:text-blue-200 transition">Admissions</a>
+        <a href="about.html" class="hover:text-blue-200 transition">About</a>
+        <a href="#contact" class="hover:text-blue-200 transition">Contact</a>
+      </nav>
+      <div class="flex flex-col items-end text-sm ml-4">
+        <span class="font-semibold">Contact:</span>
+        <a href="tel:+254712345678" class="hover:underline text-sm">+254 723 598 760</a>
+        <a href="mailto:info@kibosspecial.ac.ke" class="hover:underline text-sm break-all">kibosspecial@gmail.com</a>
+        <div class="flex gap-2 mt-2">
+          <a href="https://facebook.com/" target="_blank" aria-label="Facebook" class="hover:text-blue-400"><i class="fab fa-facebook fa-lg"></i></a>
+          <a href="https://twitter.com/" target="_blank" aria-label="Twitter" class="hover:text-blue-400"><i class="fab fa-twitter fa-lg"></i></a>
+          <a href="https://instagram.com/" target="_blank" aria-label="Instagram" class="hover:text-blue-400"><i class="fab fa-instagram fa-lg"></i></a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative flex items-center justify-center min-h-[60vh] bg-blue-800 text-white overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="carousel h-full">
+        <img src="class front view.jpeg" class="active object-cover w-full h-full" alt="School campus view" loading="lazy">
+        <img src="form 3.jpeg" alt="Students in class" loading="lazy">
+        <img src="Event.jpeg" alt="School event" loading="lazy">
+        <img src="Gateview.jpeg" alt="Students" loading="lazy">
+      </div>
+      <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+    </div>
+    <div class="relative z-10 flex flex-col items-center justify-center text-center py-16 px-4">
+      <h2 class="text-5xl font-bold mb-4 drop-shadow-lg aos-animate px-2" data-aos="fade-down" data-aos-delay="200">Empowering Every Learner</h2>
+      <p class="text-2xl font-semibold text-green-200 mb-2 aos-animate px-2" data-aos="fade-up" data-aos-delay="400">Inspired for excellence</p>
+      <p class="text-2xl mb-8 drop-shadow-lg px-2">Inclusive, high-quality education for all abilities</p>
+      <a href="#admissions" class="bg-green-500 text-white px-10 py-5 rounded-full text-2xl font-extrabold shadow-2xl drop-shadow-xl hover:bg-green-600 hover:scale-105 transition transform duration-300 aos-animate" data-aos="zoom-in" data-aos-delay="600">Enroll Now</a>
+    </div>
+  </section>
+
+  <!-- Quick Stats Section -->
+  <section class="bg-white py-8 px-6 max-w-6xl mx-auto -mt-10 mb-0 rounded-xl shadow-lg z-20 relative overflow-hidden flex flex-row gap-12 items-center justify-between" data-aos="zoom-in" data-aos-delay="100">
+    <div class="flex flex-col flex-1 items-center">
+      <div class="text-green-600 text-5xl font-extrabold stat-count" data-count="231">0</div>
+      <span class="font-semibold mt-2 text-gray-700 text-sm">Current Students</span>
+    </div>
+    <div class="flex flex-col flex-1 items-center">
+      <div class="text-blue-700 text-5xl font-extrabold stat-count" data-count="20">0</div>
+      <span class="font-semibold mt-2 text-gray-700 text-sm">Teachers</span>
+    </div>
+    <div class="flex flex-col flex-1 items-center">
+      <div class="text-yellow-600 text-5xl font-extrabold stat-count" data-count="5">0</div>
+      <span class="font-semibold mt-2 text-gray-700 text-sm">Clubs & Societies</span>
+    </div>
+    <div class="flex flex-col flex-1 items-center">
+      <div class="text-purple-700 text-5xl font-extrabold stat-count" data-count="15">0</div>
+      <span class="font-semibold mt-2 text-gray-700 text-sm">Years Existence</span>
+    </div>
+  </section>
+
+  <!-- Why Choose Us -->
+  <section class="bg-white py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <h3 class="text-3xl font-bold text-center text-blue-800 mb-12 px-2">Why Choose Us</h3>
+    <div class="grid grid-cols-3 gap-10 text-center">
+      <div class="bg-blue-50 p-8 rounded-lg shadow hover:shadow-xl transition">
+        <i class="fas fa-school text-5xl text-blue-800 mb-4"></i>
+        <h4 class="text-xl font-semibold mb-2">Modern Facilities</h4>
+        <p class="text-base">Equipped with state-of-the-art learning spaces designed for accessibility and comfort.</p>
+      </div>
+      <div class="bg-blue-50 p-8 rounded-lg shadow hover:shadow-xl transition">
+        <i class="fas fa-heart text-5xl text-blue-800 mb-4"></i>
+        <h4 class="text-xl font-semibold mb-2">Inclusive Environment</h4>
+        <p class="text-base">We foster a caring and supportive community where every student belongs.</p>
+      </div>
+      <div class="bg-blue-50 p-8 rounded-lg shadow hover:shadow-xl transition">
+        <i class="fas fa-chalkboard-teacher text-5xl text-blue-800 mb-4"></i>
+        <h4 class="text-xl font-semibold mb-2">Qualified Staff</h4>
+        <p class="text-base">Our teachers are highly trained in delivering specialized and inclusive education.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Academic Programs -->
+  <!-- Wavy SVG divider -->
+  <div class="relative"><svg viewBox="0 0 1440 100" class="block w-full -mb-2" style="min-height:40px"><path fill="#f1f5f9" fill-opacity="1" d="M0,80L60,74.7C120,69,240,59,360,48C480,37,600,27,720,42.7C840,59,960,101,1080,117.3C1200,133,1320,123,1380,117.3L1440,112L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"></path></svg></div>
+  <section id="academics" class="bg-gray-100 py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <h3 class="text-3xl font-bold text-blue-800 mb-10 text-center px-2">Academic Programs</h3>
+    <div class="grid grid-cols-2 gap-10">
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl transition flex flex-col items-center aos-animate" data-aos="fade-right" data-aos-delay="200">
+        <i class="fas fa-book-reader text-4xl text-blue-700 mb-4"></i>
+        <h4 class="text-2xl font-semibold mb-3">Special Needs Curriculum</h4>
+        <p class="text-base text-center leading-relaxed">Our comprehensive special needs curriculum is individually tailored to address the unique learning requirements of each student. We employ differentiated instruction methods, adaptive teaching strategies, and personalized learning plans that accommodate various disabilities including physical, cognitive, sensory, and developmental challenges. Our curriculum emphasizes life skills, functional academics, and social-emotional development, ensuring every student reaches their full potential in a supportive and nurturing environment.</p>
+      </div>
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl transition flex flex-col items-center aos-animate" data-aos="fade-left" data-aos-delay="400">
+        <i class="fas fa-users text-4xl text-blue-700 mb-4"></i>
+        <h4 class="text-2xl font-semibold mb-3">Mainstream Integration</h4>
+        <p class="text-base text-center leading-relaxed">Our mainstream integration program creates truly inclusive classrooms where students with special needs learn alongside their peers in regular academic settings. We provide co-teaching models, peer support systems, and universal design for learning principles that benefit all students. This approach fosters mutual understanding, respect, and social integration while maintaining high academic standards. Students develop empathy, leadership skills, and collaborative abilities, creating a diverse and enriched learning community for everyone.</p>
+      </div>
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl transition flex flex-col items-center aos-animate" data-aos="fade-right" data-aos-delay="600">
+        <i class="fas fa-eye-slash text-4xl text-green-700 mb-4"></i>
+        <h4 class="text-2xl font-semibold mb-3">Rehabilitation Center</h4>
+        <p class="text-base text-center leading-relaxed">Our comprehensive vision rehabilitation program provides specialized support for students who have lost sight or have visual impairments. We offer training in Braille literacy, orientation and mobility skills, daily living activities, and assistive technology for the visually impaired. Our certified vision specialists work one-on-one and in small groups to help students develop independence, confidence, and academic success. The program includes adaptive techniques for reading, writing, navigation, and accessing digital content, ensuring students can fully participate in all aspects of school life and beyond.</p>
+      </div>
+      <div class="bg-white p-8 rounded-lg shadow hover:shadow-xl transition flex flex-col items-center aos-animate" data-aos="fade-left" data-aos-delay="800">
+        <i class="fas fa-laptop-code text-4xl text-purple-700 mb-4"></i>
+        <h4 class="text-2xl font-semibold mb-3">Ditigal Learning</h4>
+        <p class="text-base text-center leading-relaxed">Our computer learning program equips all students with essential digital literacy skills and modern technology competencies. We provide comprehensive training in basic computer operations, word processing, internet research, presentation software, and coding fundamentals. For students with special needs, we integrate assistive technologies including screen readers, voice recognition software, adaptive keyboards, and specialized input devices. Our state-of-the-art computer labs are fully accessible, ensuring every student can develop the technological skills necessary for academic success and future career opportunities in our digital world.</p>
+      </div>
+    </div>
+    <div class="mt-8 aos-animate" data-aos="fade-up" data-aos-delay="300">
+      <h4 class="text-xl font-semibold text-blue-800 mb-4 text-center px-2">Academic Pathways</h4>
+      <div class="flex flex-row justify-center gap-8">
+        <div class="bg-blue-100 p-4 rounded-lg text-center shadow flex-1">
+          <span class="block text-2xl font-bold text-blue-700 mb-2">STEM</span>
+          <span class="block text-sm text-gray-700">Science, Technology, Engineering & Math</span>
+        </div>
+        <div class="bg-blue-100 p-4 rounded-lg text-center shadow flex-1">
+          <span class="block text-2xl font-bold text-blue-700 mb-2">Social Sciences</span>
+          <span class="block text-sm text-gray-700">language,Humanities & Social Studies</span>
+        </div>
+        <div class="bg-blue-100 p-4 rounded-lg text-center shadow flex-1">
+          <span class="block text-2xl font-bold text-blue-700 mb-2">Arts & Sports Sciences</span>
+          <span class="block text-sm text-gray-700">Creative, Performing Arts & Sports</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Administration Section -->
+  <!-- Section divider -->
+  <div class="relative"><svg viewBox="0 0 1440 100" class="block w-full -mb-2" style="min-height:40px"><path fill="#e0e7ef" fill-opacity="1" d="M0,40L60,48C120,56,240,72,360,82.7C480,93,600,99,720,94.7C840,91,960,75,1080,58.7C1200,43,1320,27,1380,19.3L1440,11L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z"></path></svg></div>
+  <section class="bg-white py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <h3 class="text-3xl font-bold text-blue-800 mb-12 text-center px-2">Our Administration</h3>
+      <div class="grid grid-cols-3 gap-10 text-center aos-animate" data-aos="fade-up" data-aos-delay="200">
+      <!-- Principal -->
+      <div class="bg-blue-50 p-8 rounded-lg shadow hover:shadow-xl transition flex flex-col items-center">
+        <img src="Mr.principal.jpeg" alt="Principal Photo" class="rounded-full w-32 h-32 object-cover mb-4 border-4 border-blue-800 shadow-md">
+        <h4 class="text-xl font-semibold mb-2">Principal</h4>
+        <p class="text-base text-center">The chief administrator ensuring the highest standards for all.</p>
+      </div>
+      <!-- Deputy Principal -->
+      <div class="bg-blue-50 p-8 rounded-lg shadow hover:shadow-xl transition flex flex-col items-center">
+        <img src="https://via.placeholder.com/200x200/2563eb/ffffff?text=Deputy+Principal" alt="Deputy Principal Photo" class="rounded-full w-32 h-32 object-cover mb-4 border-4 border-blue-700 shadow-md">
+        <h4 class="text-xl font-semibold mb-2">Deputy Principal</h4>
+        <p class="text-base text-center">Supports the principal in all management and student matters.</p>
+      </div>
+      <!-- DOS -->
+      <div class="bg-blue-50 p-8 rounded-lg shadow hover:shadow-xl transition flex flex-col items-center">
+        <img src="https://via.placeholder.com/200x200/16a34a/ffffff?text=DOS" alt="Director of Studies Photo" class="rounded-full w-32 h-32 object-cover mb-4 border-4 border-green-800 shadow-md">
+        <h4 class="text-xl font-semibold mb-2">DOS</h4>
+        <p class="text-base text-center">Director of Studies coordinating all academic matters.</p>
+      </div>
+      <!-- Bursar -->
+      <div class="bg-blue-50 p-8 rounded-lg shadow hover:shadow-xl transition flex flex-col items-center">
+        <img src="https://via.placeholder.com/200x200/eab308/ffffff?text=Bursar" alt="Bursar Photo" class="rounded-full w-32 h-32 object-cover mb-4 border-4 border-yellow-700 shadow-md">
+        <h4 class="text-xl font-semibold mb-2">Bursar</h4>
+        <p class="text-base text-center">Responsible for all the school's finances and budgeting.</p>
+      </div>
+      <!-- Secretary -->
+      <div class="bg-blue-50 p-8 rounded-lg shadow hover:shadow-xl transition flex flex-col items-center">
+        <img src="Sec.jpeg" alt="Secretary Photo" class="rounded-full w-32 h-32 object-cover mb-4 border-4 border-purple-700 shadow-md">
+        <h4 class="text-xl font-semibold mb-2">Secretary</h4>
+        <p class="text-base text-center">Ensures smooth administration, communication, and support.</p>
+      </div>
+      <!-- Boarding Master -->
+      <div class="bg-blue-50 p-8 rounded-lg shadow hover:shadow-xl transition flex flex-col items-center">
+        <img src="https://via.placeholder.com/200x200/6b7280/ffffff?text=Boarding+Master" alt="Boarding Master Photo" class="rounded-full w-32 h-32 object-cover mb-4 border-4 border-gray-500 shadow-md">
+        <h4 class="text-xl font-semibold mb-2">Boarding Master</h4>
+        <p class="text-base text-center">Oversees hostel and welfare for boarding students.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <!-- Section divider -->
+  <div class="relative"><svg viewBox="0 0 1440 100" class="block w-full -mb-2" style="min-height:40px"><path fill="#f1f5f9" fill-opacity="1" d="M0,0C240,30,480,60,720,77.3C960,95,1200,101,1380,98.7L1440,96L1440,100L1380,100C1200,100,960,100,720,100C480,100,240,100,0,100Z"></path></svg></div>
+  <section id="gallery" class="py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <h3 class="text-3xl font-bold text-blue-800 mb-10 text-center px-2">Photo Gallery</h3>
+    <div class="grid grid-cols-4 gap-6" id="gallery-grid">
+      <img src="School.jpeg" alt="Gallery 1" class="rounded-lg shadow hover:scale-110 hover:brightness-105 transition-transform duration-300 cursor-pointer" onclick="openLightbox(this.src, this.alt)">
+      <img src="Treeplanting.jpeg" alt="Gallery 2" class="rounded-lg shadow hover:scale-110 hover:brightness-105 transition-transform duration-300 cursor-pointer" onclick="openLightbox(this.src, this.alt)">
+      <img src="staff.jpeg" alt="Gallery 3" class="rounded-lg shadow hover:scale-110 hover:brightness-105 transition-transform duration-300 cursor-pointer" onclick="openLightbox(this.src, this.alt)">
+      <img src="Treeplanting2.jpeg" alt="Gallery 4" class="rounded-lg shadow hover:scale-110 hover:brightness-105 transition-transform duration-300 cursor-pointer" onclick="openLightbox(this.src, this.alt)">
+      <img src="Principal.jpeg" alt="Gallery 5" class="rounded-lg shadow hover:scale-110 hover:brightness-105 transition-transform duration-300 cursor-pointer" onclick="openLightbox(this.src, this.alt)">
+</div>
+    <!-- Lightbox for gallery -->
+    <div id="lightbox-modal" class="hidden fixed inset-0 z-50 bg-black bg-opacity-80 flex items-center justify-center">
+      <div class="relative bg-transparent max-w-3xl w-full max-h-[90vh] flex items-center justify-center">
+        <img src="" id="lightbox-img" alt="Gallery Large" class="rounded shadow-2xl max-h-[80vh] max-w-[90vw] border-4 border-white">
+        <button onclick="closeLightbox()" class="absolute top-2 right-2 bg-blue-900 text-white rounded-full p-2 text-xl hover:bg-blue-800">&times;</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <!-- Section divider -->
+  <div class="relative"><svg viewBox="0 0 1440 100" class="block w-full -mb-2" style="min-height:40px"><path fill="#e5e7fa" fill-opacity="1" d="M0,65L60,58.7C120,53,240,41,360,42.7C480,45,600,61,720,67.3C840,73,960,69,1080,64C1200,59,1320,53,1380,50.7L1440,48L1440,100L1380,100C1320,100,1200,100,1080,100C960,100,840,100,720,100C600,100,480,100,360,100C240,100,120,100,60,100L0,100Z"></path></svg></div>
+  <section class="bg-blue-50 py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <h3 class="text-3xl font-bold text-blue-800 mb-10 text-center px-2">What Our Community Says</h3>
+    <div class="grid grid-cols-3 gap-10 text-center aos-animate" data-aos="fade-up" data-aos-delay="200">
+      <div class="bg-white p-8 rounded-lg shadow flex flex-col items-center aos-animate" data-aos="fade-right" data-aos-delay="300">
+        <img src="BOM.jpeg" alt="BOM" class="rounded-full mb-4">
+        <p class="italic mb-4 text-base">"Kibos has transformed my child's life. The teachers truly care!"</p>
+        <span class="font-semibold text-base">- Parent</span>
+      </div>
+      <div class="bg-white p-8 rounded-lg shadow flex flex-col items-center aos-animate" data-aos="fade-up" data-aos-delay="400">
+        <img src="STUDENT.jpeg" alt="Student" class="rounded-full mb-4">
+        <p class="italic mb-4 text-base">"I love my school because everyone is included and supported."</p>
+        <span class="font-semibold text-base">- Student</span>
+      </div>
+      <div class="bg-white p-8 rounded-lg shadow flex flex-col items-center aos-animate" data-aos="fade-left" data-aos-delay="500">
+        <img src="eduction officers.jpeg" alt="Education Officer" class="rounded-full mb-4">
+        <p class="italic mb-4 text-base">"A model for inclusive education in Kenya."</p>
+        <span class="font-semibold text-base">- Education Officer</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Events -->
+  <section class="bg-white py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <h3 class="text-3xl font-bold text-blue-800 mb-10 text-center">Upcoming Events & Activities</h3>
+    <div class="grid grid-cols-3 gap-8">
+      <div class="flex items-center gap-4 bg-blue-50 p-6 rounded-lg shadow flex-1">
+        <i class="fas fa-door-open text-3xl text-blue-700"></i>
+        <div>
+          <div class="font-semibold text-base">Open Day</div>
+          <div class="text-sm text-gray-600">15th July 2024</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 bg-blue-50 p-6 rounded-lg shadow flex-1">
+        <i class="fas fa-calendar-check text-3xl text-blue-700"></i>
+        <div>
+          <div class="font-semibold text-base">Admissions Deadline</div>
+          <div class="text-sm text-gray-600">30th Jan 2026</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 bg-blue-50 p-6 rounded-lg shadow flex-1">
+        <i class="fas fa-futbol text-3xl text-blue-700"></i>
+        <div>
+          <div class="font-semibold text-base">Sports Day</div>
+          <div class="text-sm text-gray-600">10th September 2024</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 bg-green-50 p-6 rounded-lg shadow flex-1">
+        <i class="fas fa-trophy text-3xl text-green-700"></i>
+        <div>
+          <div class="font-semibold text-base">Sports Festival</div>
+          <div class="text-sm text-gray-600">Annual inter-school competitions</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 bg-purple-50 p-6 rounded-lg shadow flex-1">
+        <i class="fas fa-music text-3xl text-purple-700"></i>
+        <div>
+          <div class="font-semibold text-base">Music Festival</div>
+          <div class="text-sm text-gray-600">Choir, bands & performances</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-4 bg-yellow-50 p-6 rounded-lg shadow flex-1">
+        <i class="fas fa-handshake text-3xl text-yellow-700"></i>
+        <div>
+          <div class="font-semibold text-base">Partners & Well-Wishers Event</div>
+          <div class="text-sm text-gray-600">Hosting partners and well-wishers to support the school</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Signup -->
+  <!-- Section divider -->
+  <div class="relative"><svg viewBox="0 0 1440 100" class="block w-full -mb-2" style="min-height:40px"><path fill="#e0e7fa" fill-opacity="1" d="M0,90C240,70,480,50,720,52.7C960,55,1200,79,1380,89.3L1440,96L1440,100L1380,100C1200,100,960,100,720,100C480,100,240,100,0,100Z"></path></svg></div>
+  <section class="bg-blue-800 py-12 px-6 max-w-6xl mx-auto rounded-lg my-12" data-aos="fade-up">
+    <h3 class="text-2xl font-bold text-white mb-4 text-center">Stay Updated</h3>
+    <form class="flex flex-row gap-4 justify-center items-center" aria-label="Newsletter Signup" id="newsletterForm">
+      <input type="email" placeholder="Your Email" required class="p-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-400 text-base" aria-label="Email for newsletter">
+      <button type="submit" class="bg-green-500 text-white px-6 py-3 rounded-lg hover:bg-green-600 transition text-base">Subscribe</button>
+      <div id="newsletterSuccess" class="hidden mt-3 text-green-300 font-bold animate-bounce">Thank you for subscribing!</div>
+    </form>
+  </section>
+
+  <!-- Contact Section -->
+  <!-- Section divider -->
+  <div class="relative"><svg viewBox="0 0 1440 100" class="block w-full -mb-2" style="min-height:40px"><path fill="#f1f5f9" fill-opacity="1" d="M0,70C180,90,360,110,540,108C720,106,900,82,1080,89.3C1260,97,1440,135,1440,135L1440,100L0,100Z"></path></svg></div>
+  <section id="contact" class="bg-gray-100 py-16 px-6 max-w-6xl mx-auto" data-aos="fade-up">
+    <h3 class="text-3xl font-bold mb-10 text-blue-800 text-center">Contact Us</h3>
+    <div class="grid grid-cols-2 gap-10">
+      <div>
+        <iframe class="w-full h-80 rounded-lg shadow" src="https://www.google.com/maps?q=Kibos,+Muhoroni,+Kenya&output=embed" loading="lazy" title="Kibos Location"></iframe>
+      </div>
+      <div>
+        <form id="inquiryForm" class="space-y-4 bg-white p-8 rounded-lg shadow">
+          <div>
+            <input type="text" id="name" name="name" placeholder="Your Name" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-base">
+            <span id="nameError" class="error-message"></span>
+          </div>
+          <div>
+            <input type="email" id="email" name="email" placeholder="Your Email" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-base">
+            <span id="emailError" class="error-message"></span>
+          </div>
+          <div>
+            <textarea id="message" name="message" rows="5" placeholder="Your Message" required class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600 text-base"></textarea>
+            <span id="messageError" class="error-message"></span>
+          </div>
+          <button type="submit" class="bg-blue-800 text-white px-6 py-3 rounded-lg shadow hover:bg-blue-900 transition duration-300 text-base">Send Message</button>
+          <div id="formSuccess" class="text-green-600 mt-4 hidden text-base">Thank you for contacting us! We'll get back to you soon.</div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accessibility Controls -->
+  <div class="fixed left-2 bottom-2 z-50 flex flex-col gap-2 bg-white bg-opacity-80 p-2 rounded shadow">
+    <button id="increaseFont" aria-label="Increase font size" class="text-blue-800 hover:underline">A+</button>
+    <button id="decreaseFont" aria-label="Decrease font size" class="text-blue-800 hover:underline">A-</button>
+    <button id="toggleContrast" aria-label="Toggle high contrast" class="text-blue-800 hover:underline">Contrast</button>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/254712345678?text=Hello%2C%20I%20am%20interested%20in%20Kibos%20Special%20Secondary%20School" target="_blank" aria-label="Chat on WhatsApp" class="floating-button">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-10 mt-10">
+    <div class="container mx-auto flex flex-col items-center justify-center gap-6 px-4">
+      <div class="text-center text-sm">&copy; 2026 Kibos Special Senior School. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <!-- Additional JavaScript Libraries -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Carousel Script and Form Validation -->
+  <script>
+    AOS.init();
+
+    const slides = document.querySelectorAll('.carousel img');
+    let currentIndex = 0;
+    setInterval(() => {
+      slides[currentIndex].classList.remove('active');
+      currentIndex = (currentIndex + 1) % slides.length;
+      slides[currentIndex].classList.add('active');
+    }, 4000);
+
+
+    // Progress bar - optimized with requestAnimationFrame
+    let scrollTimeout;
+    function updateProgressBar() {
+      let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+      let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      let scrolled = (winScroll / height) * 100;
+      document.getElementById("progressBar").style.width = scrolled + "%";
+    }
+    window.onscroll = function () {
+      if (!scrollTimeout) {
+        scrollTimeout = requestAnimationFrame(function() {
+          updateProgressBar();
+          scrollTimeout = null;
+        });
+      }
+    };
+
+    // Scale page for small screens - optimized with debouncing
+    let resizeTimeout;
+    function scalePageForSmallScreens() {
+      const width = window.innerWidth;
+      const html = document.documentElement;
+      
+      if (width <= 480) {
+        const scale = 0.5;
+        html.style.transform = 'scale3d(' + scale + ', ' + scale + ', 1)';
+        html.style.transformOrigin = '0 0';
+        html.style.width = (100 / scale) + '%';
+        html.style.height = (100 / scale) + '%';
+        document.body.style.width = (100 / scale) + '%';
+      } else if (width <= 768) {
+        const scale = 0.65;
+        html.style.transform = 'scale3d(' + scale + ', ' + scale + ', 1)';
+        html.style.transformOrigin = '0 0';
+        html.style.width = (100 / scale) + '%';
+        html.style.height = (100 / scale) + '%';
+        document.body.style.width = (100 / scale) + '%';
+      } else {
+        html.style.transform = 'scale3d(1, 1, 1)';
+        html.style.transformOrigin = '0 0';
+        html.style.width = '100%';
+        html.style.height = '100%';
+        document.body.style.width = '100%';
+      }
+    }
+    
+    // Debounced resize handler for better performance
+    function debounceResize() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(scalePageForSmallScreens, 150);
+    }
+    
+    // Run on load
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', scalePageForSmallScreens);
+    } else {
+      scalePageForSmallScreens();
+    }
+    
+    window.addEventListener('resize', debounceResize, { passive: true });
+    window.addEventListener('orientationchange', function() {
+      setTimeout(scalePageForSmallScreens, 200);
+    }, { passive: true });
+
+    const inquiryForm = document.getElementById('inquiryForm');
+    const nameInput = document.getElementById('name');
+    const emailInput = document.getElementById('email');
+    const messageInput = document.getElementById('message');
+    const nameError = document.getElementById('nameError');
+    const emailError = document.getElementById('emailError');
+    const messageError = document.getElementById('messageError');
+    const formSuccess = document.getElementById('formSuccess');
+
+    inquiryForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+      let valid = true;
+
+      nameError.textContent = '';
+      emailError.textContent = '';
+      messageError.textContent = '';
+
+      if (nameInput.value.trim() === '') {
+        nameError.textContent = 'Name is required';
+        valid = false;
+      }
+      if (emailInput.value.trim() === '' || !emailInput.value.includes('@')) {
+        emailError.textContent = 'Valid email is required';
+        valid = false;
+      }
+      if (messageInput.value.trim() === '') {
+        messageError.textContent = 'Message is required';
+        valid = false;
+      }
+
+      if (valid) {
+        formSuccess.classList.remove('hidden');
+        inquiryForm.reset();
+        setTimeout(() => {
+          formSuccess.classList.add('hidden');
+        }, 5000);
+      }
+    });
+
+    // Accessibility controls
+    const html = document.documentElement;
+    let fontSize = 16;
+    document.getElementById('increaseFont').onclick = () => {
+      fontSize = Math.min(fontSize + 2, 24);
+      html.style.fontSize = fontSize + 'px';
+    };
+    document.getElementById('decreaseFont').onclick = () => {
+      fontSize = Math.max(fontSize - 2, 12);
+      html.style.fontSize = fontSize + 'px';
+    };
+    let highContrast = false;
+    document.getElementById('toggleContrast').onclick = () => {
+      highContrast = !highContrast;
+      if (highContrast) {
+        document.body.classList.add('contrast');
+      } else {
+        document.body.classList.remove('contrast');
+      }
+    };
+    // Animated Stats Counters
+    function animateStats() {
+      const counters = document.querySelectorAll('.stat-count');
+      counters.forEach(counter => {
+        const updateCount = () => {
+          const target = +counter.getAttribute('data-count');
+          const count = +counter.innerText;
+          const inc = Math.max(1, Math.ceil(target / 60));
+          if(count < target) {
+            counter.innerText = count + inc;
+            setTimeout(updateCount, 20);
+          } else {
+            counter.innerText = target;
+          }
+        };
+        updateCount();
+      });
+    }
+    AOS.init({
+      once: true,
+      duration: 800
+    });
+    setTimeout(animateStats, 800);
+
+    // Gallery Lightbox
+    window.openLightbox = function(src, alt) {
+      document.getElementById('lightbox-img').src = src;
+      document.getElementById('lightbox-img').alt = alt || 'Gallery Image';
+      document.getElementById('lightbox-modal').classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    };
+    window.closeLightbox = function() {
+      document.getElementById('lightbox-modal').classList.add('hidden');
+      document.getElementById('lightbox-img').src = '';
+      document.body.style.overflow = '';
+    };
+    document.getElementById('lightbox-modal').addEventListener('click', function(event) {
+      if(event.target === this) closeLightbox();
+    });
+
+    // Newsletter animated success
+    const newsletterForm = document.getElementById('newsletterForm');
+    const newsletterSuccess = document.getElementById('newsletterSuccess');
+    newsletterForm && newsletterForm.addEventListener('submit', function(e){
+      e.preventDefault();
+      newsletterSuccess.classList.remove('hidden');
+      setTimeout(() => {
+        newsletterSuccess.classList.add('hidden');
+      }, 3000);
+      newsletterForm.reset();
+    });
+
+    // Accessibility & prev controls preserved...
+  </script>
+
+</body>
+
+</html>
